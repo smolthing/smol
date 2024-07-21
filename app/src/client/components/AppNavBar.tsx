@@ -7,7 +7,7 @@ import { AiFillCloseCircle } from 'react-icons/ai';
 import { HiBars3 } from 'react-icons/hi2';
 import logo from '../static/logo.png';
 import DropdownUser from './DropdownUser';
-import { DOCS_URL, BLOG_URL } from '../../shared/constants';
+import { BLOG_URL } from '../../shared/constants';
 import DarkModeSwitcher from '../admin/components/DarkModeSwitcher';
 import { UserMenuItems } from '../components/UserMenuItems';
 
@@ -15,7 +15,6 @@ const navigation = [
   { name: 'AI Scheduler (Demo App)', href: routes.DemoAppRoute.build() },
   { name: 'File Upload (AWS S3)', href: routes.FileUploadRoute.build() },
   { name: 'Pricing', href: routes.PricingPageRoute.build() },
-  { name: 'Documentation', href: DOCS_URL },
   { name: 'Blog', href: BLOG_URL },
 ];
 
@@ -62,7 +61,7 @@ export default function AppNavBar() {
           {isUserLoading ? null : !user ? (
             <a href={!user ? routes.LoginRoute.build() : routes.AccountRoute.build()} className='text-sm font-semibold leading-6 ml-4'>
               <div className='flex items-center duration-300 ease-in-out text-gray-900 hover:text-yellow-500 dark:text-white'>
-                Log in <BiLogIn size='1.1rem' className='ml-1 mt-[0.1rem]' />
+                Login <BiLogIn size='1.1rem' className='ml-1 mt-[0.1rem]' />
               </div>
             </a>
           ) : (
@@ -107,7 +106,7 @@ export default function AppNavBar() {
                 {isUserLoading ? null : !user ? (
                   <Link to='/login'>
                     <div className='flex justify-end items-center duration-300 ease-in-out text-gray-900 hover:text-yellow-500 dark:text-white'>
-                      Log in <BiLogIn size='1.1rem' className='ml-1' />
+                      Login <BiLogIn size='1.1rem' className='ml-1' />
                     </div>
                   </Link>
                 ) : (

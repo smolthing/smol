@@ -1,80 +1,52 @@
-import { DOCS_URL, BLOG_URL } from '../../shared/constants';
-import daBoiAvatar from '../static/da-boi.png';
-import avatarPlaceholder from '../static/avatar-placeholder.png';
+import { BLOG_URL, YOUTUBE_URL } from '../../shared/constants';
 import { routes } from 'wasp/client/router';
 
 export const navigation = [
-  { name: 'Features', href: '#features' },
+  { name: 'Projects', href: '#features' },
   { name: 'Pricing', href: routes.PricingPageRoute.build() },
-  { name: 'Documentation', href: DOCS_URL },
   { name: 'Blog', href: BLOG_URL },
+  { name: 'Youtube', href: YOUTUBE_URL },
 ];
+
 export const features = [
   {
-    name: 'Cool Feature #1',
-    description: 'Describe your cool feature here.',
-    icon: '🤝',
-    href: DOCS_URL,
+    name: 'Grow a Plant',
+    description: 'A habit-tracking app where you grow a plant by visiting it daily.',
+    icon: '🌱',
+    href: "https://smolthing.github.io/plant",
   },
   {
-    name: 'Cool Feature #2',
-    description: 'Describe your cool feature here.',
-    icon: '🔐',
-    href: DOCS_URL,
+    name: 'Notepad',
+    description: 'A notetaking app for recording typing effects in videos with customizable fonts, sizes and types.',
+    icon: '✍️',
+    href: "https://smolthing.github.io/notepad",
   },
   {
-    name: 'Cool Feature #3',
-    description: 'Describe your cool feature here.',
-    icon: '🥞',
-    href: DOCS_URL,
+    name: 'Smolwork [WIP]',
+    description: 'A homework app with bite-sized content, MCQs, and interactive exercises.',
+    icon: '👩🏻‍💻',
+    href: '',
   },
   {
-    name: 'Cool Feature #4',
-    description: 'Describe your cool feature here.',
-    icon: '💸',
-    href: DOCS_URL,
-  },
-];
-export const testimonials = [
-  {
-    name: 'Da Boi',
-    role: 'Wasp Mascot',
-    avatarSrc: daBoiAvatar,
-    socialUrl: 'https://twitter.com/wasplang',
-    quote: "I don't even know how to code. I'm just a plushie.",
-  },
-  {
-    name: 'Mr. Foobar',
-    role: 'Founder @ Cool Startup',
-    avatarSrc: avatarPlaceholder,
-    socialUrl: '',
-    quote: 'This product makes me cooler than I already am.',
-  },
-  {
-    name: 'Jamie',
-    role: 'Happy Customer',
-    avatarSrc: avatarPlaceholder,
-    socialUrl: '#',
-    quote: 'My cats love it!',
-  },
+    name: 'Smolskin [WIP]',
+    description: 'A skincare app designed to help you track skincare products, log food and drinks, making it easy to understand your skin better.',
+    icon: '🧴',
+    href: '',
+  }
 ];
 
 export const faqs = [
   {
     id: 1,
-    question: 'Whats the meaning of life?',
-    answer: '42.',
-    href: 'https://en.wikipedia.org/wiki/42_(number)',
+    question: 'What is the name of the yellow birb?',
+    answer: 'Bibi',
+    href: './',
   },
 ];
+
 export const footerNavigation = {
-  app: [
-    { name: 'Documentation', href: DOCS_URL },
-    { name: 'Blog', href: BLOG_URL },
-  ],
   company: [
-    { name: 'About', href: 'https://wasp-lang.dev' },
-    { name: 'Privacy', href: '#' },
-    { name: 'Terms of Service', href: '#' },
+    { name: 'About', href: './' },
+    { name: 'Youtube', href: 'https://www.youtube.com/@smolthing'}
   ],
 };

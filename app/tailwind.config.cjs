@@ -1,5 +1,22 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 const { resolveProjectPath } = require('wasp/dev');
+import colors from "tailwindcss/colors";
+
+const COLOURS = {
+  BLUE: '#70D6FF',
+  PINK: '#FF70A6',
+  ORANGE: '#FF9770',
+  YELLOW: '#FFD670',
+  LIGHTYELLOW: colors.yellow,
+};
+
+const THEME = {
+  primary: COLOURS.BLUE,
+  secondary: COLOURS.PINK,
+  third: COLOURS.ORANGE,
+  fourth: COLOURS.YELLOW,
+  fifth: COLOURS.LIGHTYELLOW,
+};
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -20,13 +37,13 @@ module.exports = {
         bodydark: '#AEB7C0',
         bodydark1: '#DEE4EE',
         bodydark2: '#8A99AF',
-        primary: '#3C50E0',
-        secondary: '#80CAEE',
+        ...THEME,
         stroke: '#E2E8F0',
         // gray: '#000',
         // graydark: '#333A48',
         // 'gray-2': '#F7F9FC',
         // 'gray-3': '#FAFAFA',
+        white: '#f4f4f6',
         whiten: '#F1F5F9',
         whiter: '#F5F7FD',
         boxdark: '#24303F',

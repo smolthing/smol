@@ -18,16 +18,19 @@
 - 🤖 [Jobs](https://wasp-lang.dev/docs/advanced/jobs) - Run cron jobs in the background or set up queues simply by defining a function in the config file.
 - 🚀 [One-command Deploy](https://wasp-lang.dev/docs/advanced/deployment/overview) - Easily deploy via the CLI to [Fly.io](https://fly.io), or to other providers like [Railway](https://railway.app) and [Netlify](https://netlify.com).
 
-## Getting Started
+## Getting Started with a new project
 
 Install the latest version of [Wasp](https://wasp.sh/) or run the command:
 ```bash
 curl -sSL https://get.wasp-lang.dev/installer.sh | sh
 ```
 
-Create a new SaaS app with the following command:
-
-```bash
-wasp new -t saas
+Start your Wasp DB and leave it running:
+```shell
+cd app && wasp db start
 ```
 
+Open another terminal and start the Wasp app:
+```
+cd app && wasp start
+```

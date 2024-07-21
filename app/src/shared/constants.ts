@@ -4,5 +4,5 @@ export enum TierIds {
   CREDITS = 'credits',
 }
 
-export const DOCS_URL = 'https://docs.opensaas.sh';
-export const BLOG_URL = 'https://docs.opensaas.sh/blog';
+export const YOUTUBE_URL = 'https://www.youtube.com/@smolthing';
+export const BLOG_URL = 'https://dev.to/smolthing';

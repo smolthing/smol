@@ -10,7 +10,7 @@ export default defineConfig({
   trailingSlash: 'always',
   integrations: [
     starlight({
-      title: 'Smol',
+      title: 'Smolthing',
       customCss: ['./src/styles/tailwind.css'],
       description: 'Documentation for Smol.',
       logo: {

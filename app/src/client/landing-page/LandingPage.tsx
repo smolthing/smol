@@ -7,9 +7,8 @@ import { HiBars3 } from 'react-icons/hi2';
 import { BiLogIn } from 'react-icons/bi';
 import logo from '../static/logo.png';
 import openSaasBanner from '../static/bibi.gif';
-import { features, navigation, faqs, footerNavigation, testimonials } from './contentSections';
+import { features, navigation, faqs, footerNavigation } from './contentSections';
 import DropdownUser from '../components/DropdownUser';
-import { DOCS_URL } from '../../shared/constants';
 import { UserMenuItems } from '../components/UserMenuItems';
 import DarkModeSwitcher from '../admin/components/DarkModeSwitcher';
 
@@ -64,7 +63,7 @@ export default function LandingPage() {
               {isUserLoading ? null : !user ? (
                 <Link to='/login'>
                   <div className='flex justify-end items-center duration-300 ease-in-out text-gray-900 hover:text-yellow-500 dark:text-white'>
-                    Log in <BiLogIn size='1.1rem' className='ml-1' />
+                    Login <BiLogIn size='1.1rem' className='ml-1' />
                   </div>
                 </Link>
               ) : (
@@ -108,7 +107,7 @@ export default function LandingPage() {
                   {isUserLoading ? null : !user ? (
                     <Link to='/login'>
                       <div className='flex justify-start items-center duration-300 ease-in-out text-gray-900 hover:text-yellow-500 dark:text-white'>
-                        Log in <BiLogIn size='1.1rem' className='ml-1' />
+                        Login <BiLogIn size='1.1rem' className='ml-1' />
                       </div>
                     </Link>
                   ) : (
@@ -136,7 +135,10 @@ export default function LandingPage() {
             <div className='mx-auto max-w-8xl px-6 lg:px-8'>
               <div className='lg:mb-18 mx-auto max-w-3xl text-center'>
                 <h1 className='text-4xl font-bold text-gray-900 sm:text-6xl dark:text-white'>
-                  Every little smol thing
+                  Build a <span className='text-primary'>smolthing</span>
+                </h1>
+                <h1 className='text-4xl font-bold text-gray-900 sm:text-6xl dark:text-white'>
+                  every <span className='highlight-pink'>single</span> day
                 </h1>
                 <div className='mt-14 flex justify-center sm:mt-14'>
                 <div className='-m-2 rounded-xl  lg:-m-4 lg:rounded-2xl lg:p-4'>
@@ -144,21 +146,10 @@ export default function LandingPage() {
                     src={openSaasBanner}
                     alt='App screenshot'
                     width={500}
-                    className='rounded-md shadow-2xl ring-1 ring-gray-900/10'
+                    className=''
                   />
                 </div>
               </div>
-                <p className='mt-6 mx-auto max-w-2xl text-lg leading-8 text-gray-600 dark:text-white'>
-                  comes with a little practice.
-                </p>
-                <div className='mt-10 flex items-center justify-center gap-x-6'>
-                  <a
-                    href={DOCS_URL}
-                    className='rounded-md px-3.5 py-2.5 text-sm font-semibold text-gray-700 ring-1 ring-inset ring-gray-200 hover:ring-2 hover:ring-yellow-300 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 dark:text-white'
-                  >
-                    Get Started <span aria-hidden='true'>→</span>
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -168,11 +159,7 @@ export default function LandingPage() {
         <div id='features' className='mx-auto mt-10 max-w-7xl px-6 lg:px-8'>
           <div className='mx-auto max-w-2xl text-center'>
             <p className='mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white'>
-              The <span className='text-yellow-500'>Best</span> Features
-            </p>
-            <p className='mt-6 text-lg leading-8 text-gray-600 dark:text-white'>
-              Don't work harder.
-              <br /> Work smarter.
+              <span className='text-third'>Project</span> Features
             </p>
           </div>
           <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
@@ -183,7 +170,7 @@ export default function LandingPage() {
                     <div className='absolute left-0 top-0 flex h-10 w-10 items-center justify-center border border-yellow-400 bg-yellow-100/50 dark:bg-boxdark rounded-lg'>
                       <div className='text-2xl'>{feature.icon}</div>
                     </div>
-                    {feature.name}
+                    <a className='underline hover:text-secondary' href={feature.href}>{feature.name}</a>
                   </dt>
                   <dd className='mt-2 text-base leading-7 text-gray-600 dark:text-white'>{feature.description}</dd>
                 </div>
@@ -192,39 +179,10 @@ export default function LandingPage() {
           </div>
         </div>
 
-        {/* Testimonial section */}
-        <div className='mx-auto mt-32 max-w-7xl sm:mt-56 sm:px-6 lg:px-8'>
-          <div className='relative sm:left-5 -m-2 rounded-xl bg-yellow-400/20 lg:ring-1 lg:ring-yellow-500/50 lg:-m-4 '>
-            <div className='relative sm:top-5 sm:right-5 bg-gray-900 dark:bg-boxdark px-8 py-20 shadow-xl sm:rounded-xl sm:px-10 sm:py-16 md:px-12 lg:px-20'>
-              <h2 className='text-left text-xl font-semibold tracking-wide leading-7 text-gray-500 dark:text-white'>
-                What Our Users Say
-              </h2>
-              <div className='relative flex flex-wrap gap-6 w-full mt-6 z-10 justify-between lg:mx-0'>
-                {testimonials.map((testimonial) => (
-                  <figure className='w-full lg:w-1/4 box-content flex flex-col justify-between p-8 rounded-xl bg-gray-500/5 '>
-                    <blockquote className='text-lg text-white sm:text-md sm:leading-8'>
-                      <p>{testimonial.quote}</p>
-                    </blockquote>
-                    <figcaption className='mt-6 text-base text-white'>
-                      <a href={testimonial.socialUrl} className='flex items-center gap-x-2'>
-                        <img src={testimonial.avatarSrc} className='h-12 w-12 rounded-full' />
-                        <div>
-                          <div className='font-semibold hover:underline'>{testimonial.name}</div>
-                          <div className='mt-1'>{testimonial.role}</div>
-                        </div>
-                      </a>
-                    </figcaption>
-                  </figure>
-                ))}
-              </div>
-            </div>
-          </div>
-        </div>
-
         {/* FAQ */}
         <div className='mt-32 mx-auto max-w-2xl divide-y divide-gray-900/10 dark:divide-gray-200/10 px-6 pb-8 sm:pb-24 sm:pt-12 lg:max-w-7xl lg:px-8 lg:py-32'>
           <h2 className='text-2xl font-bold leading-10 tracking-tight text-gray-900 dark:text-white'>
-            Frequently asked questions
+            FAQs
           </h2>
           <dl className='mt-10 space-y-8 divide-y divide-gray-900/10'>
             {faqs.map((faq) => (
@@ -234,11 +192,6 @@ export default function LandingPage() {
                 </dt>
                 <dd className='flex items-center justify-start gap-2 mt-4 lg:col-span-7 lg:mt-0'>
                   <p className='text-base leading-7 text-gray-600 dark:text-white'>{faq.answer}</p>
-                  {faq.href && (
-                    <a href={faq.href} className='text-base leading-7 text-yellow-500 hover:text-yellow-600'>
-                      Learn more →
-                    </a>
-                  )}
                 </dd>
               </div>
             ))}
@@ -252,24 +205,9 @@ export default function LandingPage() {
           aria-labelledby='footer-heading'
           className='relative border-t border-gray-900/10 dark:border-gray-200/10 py-24 sm:mt-32'
         >
-          <h2 id='footer-heading' className='sr-only'>
-            Footer
-          </h2>
-          <div className='flex items-start justify-end mt-10 gap-20'>
+          <div className='flex items-start justify-start mt-10 gap-20'>
             <div>
-              <h3 className='text-sm font-semibold leading-6 text-gray-900 dark:text-white'>App</h3>
-              <ul role='list' className='mt-6 space-y-4'>
-                {footerNavigation.app.map((item) => (
-                  <li key={item.name}>
-                    <a href={item.href} className='text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-white'>
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            <div>
-              <h3 className='text-sm font-semibold leading-6 text-gray-900 dark:text-white'>Company</h3>
+              <h2 className='text-sm font-semibold leading-6 text-gray-900 dark:text-white'>Smolthing</h2>
               <ul role='list' className='mt-6 space-y-4'>
                 {footerNavigation.company.map((item) => (
                   <li key={item.name}>

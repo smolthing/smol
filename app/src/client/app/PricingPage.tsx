@@ -158,7 +158,7 @@ const PricingPage = () => {
                     'mt-8 block rounded-md py-2 px-3 text-center text-sm dark:text-white font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-400'
                   )}
                 >
-                  {!!user ? 'Buy plan' : 'Log in to buy plan'}
+                  {!!user ? 'Buy plan' : 'Login to buy plan'}
                 </button>
               )}
             </div>
