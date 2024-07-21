@@ -3,18 +3,14 @@ app OpenSaaS {
     version: "^0.13.2"
   },
 
-  title: "My Open SaaS App",
+  title: "Smolthing | Code with me",
 
   head: [
         "<meta property='og:type' content='website' />",
-        "<meta property='og:title' content='My Open SaaS App' />",
-        "<meta property='og:url' content='https://opensaas.sh' />",
-        "<meta property='og:description' content='I made a SaaS App. Buy my stuff.' />",
-        "<meta property='og:image' content='https://opensaas.sh/public-banner.png' />",
-        "<meta name='twitter:image' content='https://opensaas.sh/public-banner.png' />",
-        "<meta name='twitter:image:width' content='800' />",
-        "<meta name='twitter:image:height' content='400' />",
-        "<meta name='twitter:card' content='summary_large_image' />",
+        "<meta property='og:title' content='Smolthing | Code with me' />",
+        "<meta property='og:url' content='https://dev.to/smolthing' />",
+        "<meta property='og:description' content='A platform to document and share my coding journey, showcasing the projects, challenges, and milestones I encounter along the way.' />",
+        "<meta property='og:image' content='/@fs/Users/mysmolthing/Smolthing/smol/app/src/client/static/bibi.gif' />",
         // TODO: You can put your analytics scripts below (https://docs.opensaas.sh/guides/analytics/):
         //   If you are going with Plausible:
         "<script defer data-domain='<your-site-id>' src='https://plausible.io/js/script.js'></script>",  // for production
