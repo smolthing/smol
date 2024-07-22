@@ -19,6 +19,8 @@ export default function LandingPage() {
 
   const NavLogo = () => <img className='h-8 w-8' src={logo} alt='Your SaaS App' />;
 
+  const currentYear = new Date().getFullYear();
+
   return (
     <div className='bg-white dark:text-white dark:bg-boxdark-2'>
       {/* Header */}
@@ -159,7 +161,7 @@ export default function LandingPage() {
         <div id='features' className='mx-auto mt-10 max-w-7xl px-6 lg:px-8'>
           <div className='mx-auto max-w-2xl text-center'>
             <p className='mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white'>
-              <span className='text-third'>Project</span> Features
+              <span className='text-third'>Projects</span> I've built
             </p>
           </div>
           <div className='mx-auto mt-16 max-w-2xl sm:mt-20 lg:mt-24 lg:max-w-4xl'>
@@ -191,7 +193,7 @@ export default function LandingPage() {
                   {faq.question}
                 </dt>
                 <dd className='flex items-center justify-start gap-2 mt-4 lg:col-span-7 lg:mt-0'>
-                  <p className='text-base leading-7 text-gray-600 dark:text-white'>{faq.answer}</p>
+                  <a href={faq.href} target="_blank" className='text-base leading-7 text-gray-800 dark:text-white'>{faq.answer}</a>
                 </dd>
               </div>
             ))}
@@ -207,16 +209,7 @@ export default function LandingPage() {
         >
           <div className='flex items-start justify-start mt-10 gap-20'>
             <div>
-              <h2 className='text-sm font-semibold leading-6 text-gray-900 dark:text-white'>Smolthing</h2>
-              <ul role='list' className='mt-6 space-y-4'>
-                {footerNavigation.company.map((item) => (
-                  <li key={item.name}>
-                    <a href={item.href} className='text-sm leading-6 text-gray-600 hover:text-gray-900 dark:text-white'>
-                      {item.name}
-                    </a>
-                  </li>
-                ))}
-              </ul>
+              <h2 className='text-sm font-semibold leading-6 text-gray-900 dark:text-white'>© {currentYear} Smolthing </h2>
             </div>
           </div>
         </footer>

@@ -9,26 +9,26 @@ import { z } from 'zod';
 
 export const tiers = [
   {
-    name: 'Hobby',
+    name: 'Free',
     id: TierIds.HOBBY,
     price: '$0',
-    description: 'Join the community and stay informed with our newsletter.',
-    features: ['Newsletter', 'MCQ'],
+    description: 'Start learning for free! Take notes and enjoy one fun exercise each week.',
+    features: ['Notes', '1 hands-on exercise / week'],
   },
   {
-    name: 'Pro',
+    name: 'Nerd',
     id: TierIds.PRO,
-    price: '$5',
-    description: 'Unlock our most popular plan with monthly assignments and share your work with our community',
-    features: ['Newsletter', 'MCQs', `Monthly hand-ons homeworks`],
+    price: '$10',
+    description: 'Get the best value with our Pro plan! Enjoy daily exercises, chat on Discord, and go ad-free. Share your progress with our awesome community!',
+    features: ['Notes', '1 hands-on exercise / day', 'Discord', 'No ads'],
     bestDeal: true,
   },
   {
     name: '10 Credits',
     id: TierIds.CREDITS,
-    price: '$69',
-    description: 'One-time purchase to use forever',
-    features: ['Use credits for e.g. OpenAI API calls', 'No expiration date'],
+    price: '$10',
+    description: 'Use credits to unlock exercises whenever you want. No subscription needed, just pure learning fun!',
+    features: ['Notes', '1 hands-on exercise / token'],
   },
 ];
 
@@ -77,11 +77,11 @@ const PricingPage = () => {
       <div className='mx-auto max-w-7xl px-6 lg:px-8'>
         <div id='pricing' className='mx-auto max-w-4xl text-center'>
           <h2 className='mt-2 text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl dark:text-white'>
-            Pick your <span className='text-yellow-500'>pricing</span>
+            Subscribe <span className='text-secondary'>today</span>
           </h2>
         </div>
         <p className='mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-600 dark:text-white'>
-          Stripe subscriptions and secure webhooks are built-in. Just add your Stripe Product IDs! Try it out below with
+          Just add your Stripe Product IDs! Try it out below with
           test credit card number{' '}
           <span className='px-2 py-1 bg-gray-100 rounded-md text-gray-500'>4242 4242 4242 4242 4242</span>
         </p>
@@ -158,7 +158,7 @@ const PricingPage = () => {
                     'mt-8 block rounded-md py-2 px-3 text-center text-sm dark:text-white font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-yellow-400'
                   )}
                 >
-                  {!!user ? 'Buy plan' : 'Login to buy plan'}
+                  Subscribe
                 </button>
               )}
             </div>

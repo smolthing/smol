@@ -40,13 +40,23 @@ export const faqs = [
     id: 1,
     question: 'What is the name of the yellow birb?',
     answer: 'Bibi',
-    href: './',
+    href: '',
+  },
+  {
+    id: 2,
+    question: 'Where can I find the code?',
+    answer: 'Github',
+    href: 'https://github.com/smolthing?tab=repositories',
+  },
+  {
+    id: 3,
+    question: 'How do I contact you?',
+    answer: 'Comment on my Youtube',
+    href: 'https://www.youtube.com/@smolthing',
   },
 ];
 
 export const footerNavigation = {
   company: [
-    { name: 'About', href: './' },
-    { name: 'Youtube', href: 'https://www.youtube.com/@smolthing'}
   ],
 };

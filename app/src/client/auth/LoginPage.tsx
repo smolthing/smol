@@ -18,22 +18,19 @@ export default function Login() {
   return (
     <AuthWrapper>
       <LoginForm />
-      <br />
-      <span className='text-sm font-medium text-gray-900 dark:text-gray-900'>
-        Don't have an account yet?{' '}
-        <Link to='/signup' className='underline'>
-          go to signup
+      <div className="mt-6">
+      <span className="text-sm text-gray-700 dark:text-gray-400">
+        Don't have an account? {' '}
+        <Link to='/signup' className='font-medium text-secondary hover:text-secondarydark transition duration-300'>
+          Create an account
         </Link>
-        .
       </span>
-      <br />
-      <span className='text-sm font-medium text-gray-900'>
-        Forgot your password?{' '}
-        <Link to='/request-password-reset' className='underline'>
-          reset it
+      <p className="mt-4 text-sm text-gray-700 dark:text-gray-400">
+        <Link to='/request-password-reset' className='text-third hover:text-thirddark transition duration-300'>
+          Forgot password?
         </Link>
-        .
-      </span>
+      </p>
+    </div>
     </AuthWrapper>
   );
 }

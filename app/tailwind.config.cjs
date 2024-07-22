@@ -13,7 +13,9 @@ const COLOURS = {
 const THEME = {
   primary: COLOURS.BLUE,
   secondary: COLOURS.PINK,
+  secondarydark: colors.pink[600],
   third: COLOURS.ORANGE,
+  thirddark: colors.orange[600],
   fourth: COLOURS.YELLOW,
   fifth: COLOURS.LIGHTYELLOW,
 };

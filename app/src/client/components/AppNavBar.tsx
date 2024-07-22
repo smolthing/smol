@@ -12,9 +12,9 @@ import DarkModeSwitcher from '../admin/components/DarkModeSwitcher';
 import { UserMenuItems } from '../components/UserMenuItems';
 
 const navigation = [
-  { name: 'AI Scheduler (Demo App)', href: routes.DemoAppRoute.build() },
-  { name: 'File Upload (AWS S3)', href: routes.FileUploadRoute.build() },
   { name: 'Pricing', href: routes.PricingPageRoute.build() },
+  { name: 'Homework', href: routes.DemoAppRoute.build() },
+  { name: 'File Upload (AWS S3)', href: routes.FileUploadRoute.build() },
   { name: 'Blog', href: BLOG_URL },
 ];
 
